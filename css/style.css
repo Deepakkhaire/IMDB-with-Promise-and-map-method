@@ -17,7 +17,7 @@ body{
 .moviecard img{
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: cover; 
 }
 .moviecard figcaption{
     position: absolute;
@@ -34,4 +34,7 @@ body{
 }
 .moviecard:hover .overview{
     bottom: 0;
+    height: 50%;
+    overflow-y: scroll
+   
 }

@@ -4,11 +4,11 @@ const imgUrl="https://image.tmdb.org/t/p/w1280";
  
 var moviesInfo = document.getElementById("moviesInfo");
 
-const templating = (newArr) => {
-    let result = "";
-    newArr.map(function(movie){
-        result += `<div class="col-lg-3 col-md-6 col-xs-12">
-        <div class="card mt-4 mb-4">
+const templating = (arr) => {
+    
+    let result = arr.map(function(movie){
+       return `<div class="col-lg-3 col-md-6 col-xs-12">
+        <div class="card mt-4 mb-2">
             <figure class="moviecard">
             <img src="${imgUrl}${movie.backdrop_path}" alt="${movie.title}" title="${movie.title}">
                 <figcaption class="text-white p-2 bg-dark">
@@ -31,8 +31,8 @@ const templating = (newArr) => {
         </div>
     </div>`;
     })
-    
-    moviesInfo.innerHTML = result;
+    let res1 = result.join("")
+    moviesInfo.innerHTML = res1;
 }
 const myMovies = () => {
    return new Promise ((resolve, reject) => {
